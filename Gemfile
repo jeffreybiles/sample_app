@@ -4,10 +4,13 @@ gem 'rails'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
 gem 'execjs'
 gem 'therubyracer'
 gem 'gravatar_image_tag'
+
+group :development, :test do
+	'sqlite3'
+end
 
 group :development do
 	gem 'rspec-rails'
@@ -19,6 +22,10 @@ group :test do
 	#gem 'webrat', '0.7.1'
 	gem 'spork'
 	gem 'factory_girl_rails', '1.0'
+end
+
+group :production do
+	gem 'pg'
 end
 
 # Gems used only for assets and not required
