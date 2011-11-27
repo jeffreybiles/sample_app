@@ -9,7 +9,7 @@ gem 'therubyracer'
 gem 'gravatar_image_tag'
 
 group :development, :test do
-	'sqlite3'
+	gem 'sqlite3'
 end
 
 group :development do
