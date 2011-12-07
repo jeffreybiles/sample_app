@@ -19,9 +19,9 @@ end
 
 group :test do
 	gem 'rspec'
-	#gem 'webrat', '0.7.1'
+	gem 'webrat'
 	gem 'spork'
-	gem 'factory_girl_rails', '1.0'
+	gem 'factory_girl_rails'
 end
 
 group :production do
