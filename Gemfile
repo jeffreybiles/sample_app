@@ -7,6 +7,9 @@ gem 'rails'
 gem 'execjs'
 gem 'therubyracer'
 gem 'gravatar_image_tag'
+gem 'faker'
+gem 'will_paginate'
+gem 'jquery-rails'
 
 group :development, :test do
 	gem 'sqlite3'
