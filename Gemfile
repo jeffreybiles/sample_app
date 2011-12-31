@@ -10,6 +10,7 @@ gem 'gravatar_image_tag'
 gem 'faker'
 gem 'will_paginate'
 gem 'jquery-rails'
+gem 'simple_form'
 
 group :development, :test do
 	gem 'sqlite3'
@@ -22,7 +23,7 @@ end
 
 group :test do
 	gem 'rspec'
-	gem 'webrat'
+	gem 'capybara'
 	gem 'spork'
 	gem 'factory_girl_rails'
 end

@@ -107,8 +107,8 @@ task :default => :test
 
     def stylesheets
       if mountable?
-        copy_file "#{app_templates_dir}/app/assets/stylesheets/application.css",
-                  "app/assets/stylesheets/#{name}/application.css"
+        copy_file "#{app_templates_dir}/app/assets/stylesheets/application.css.scss.scss",
+                  "app/assets/stylesheets/#{name}/application.css.scss.scss"
       elsif full?
         empty_directory_with_gitkeep "app/assets/stylesheets/#{name}"
       end

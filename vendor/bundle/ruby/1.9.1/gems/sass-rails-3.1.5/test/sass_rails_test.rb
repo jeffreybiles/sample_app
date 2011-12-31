@@ -58,7 +58,7 @@ class SassRailsTest < Sass::Rails::TestCase
     assert_match /globbed/, css_output
   end
   test "sass imports work correctly" do
-    css_output = sprockets_render("scss_project", "application.css.scss")
+    css_output = sprockets_render("scss_project", "application.css.scss.scss.scss")
     assert_match css_output, /main/
     assert_match css_output, /top-level/
     assert_match css_output, /partial-sass/
@@ -73,7 +73,7 @@ class SassRailsTest < Sass::Rails::TestCase
     assert_match css_output, /without-css-ext/
   end
   test "sass asset paths work" do
-    css_output = sprockets_render("scss_project", "application.css.scss")
+    css_output = sprockets_render("scss_project", "application.css.scss.scss.scss")
     assert_match css_output, %r{asset-path:\s*"/assets/rails.png"}, 'asset-path:\s*"/assets/rails.png"'
     assert_match css_output, %r{asset-url:\s*url\(/assets/rails.png\)}, 'asset-url:\s*url\(/assets/rails.png\)'
     assert_match css_output, %r{image-path:\s*"/assets/rails.png"}, 'image-path:\s*"/assets/rails.png"'
