@@ -1,6 +1,8 @@
 require 'spec_helper'
 
 describe User do
+  include Capybara::DSL
+
 
   before(:each) do
     @attr = { name: "Example User",

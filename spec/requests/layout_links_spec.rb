@@ -40,4 +40,29 @@ describe "LayoutLinks" do
     click_link "Sign up now!"
     page.find('title', :text => "Sign up")
   end
+
+  describe "when not signed in" do
+
+    it "should have a sign-in link" do
+      visit root_path
+      find_link('Sign in').visible?
+    end
+  end
+
+  describe "when signed in" do
+
+    before(:each) do
+      @user = Factory(:user)
+      integration_sign_in(@user)
+    end
+
+    it "should have a signout link" do
+      find_link('Sign out').visible?
+    end
+
+    it "should have a profile link" do
+      visit root_path
+      find_link('Profile').visible?
+    end
+  end
 end
