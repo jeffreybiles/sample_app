@@ -1,0 +1,6 @@
+%strong Name
+= @user.name
+%strong URL
+= link_to user_path(@user), @user
+%string Microposts
+= @user.microposts.count

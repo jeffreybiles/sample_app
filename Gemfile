@@ -10,7 +10,7 @@ gem 'gravatar_image_tag'
 gem 'faker'
 gem 'will_paginate'
 gem 'jquery-rails'
-gem 'simple_form'
+gem 'haml'
 
 group :development, :test do
 	gem 'sqlite3'

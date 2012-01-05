@@ -6,9 +6,10 @@ SampleApp::Application.routes.draw do
     member do
       get :following, :followers
     end
+    resources :microposts
   end
   resources :sessions, :only => [:new, :create, :destroy]
-  resources :microposts, :only => [:create, :destroy]
+  resources :microposts, :only => [:create, :destroy, :index]
   resources :relationships, :only => [:create, :destroy]
 
 	match '/signup', :to => 'users#new'

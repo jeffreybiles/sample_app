@@ -1,0 +1,16 @@
+%table(summary="Information about the following/followers")
+  %tr
+    %td
+      %h1= @title
+      - unless @users.empty?
+        %ul.users
+          =render @users
+        =will_paginate
+
+    %td.sidebar.round
+      = render 'users/user_display'
+      = render 'shared/stats'
+
+      -unless @users.empty?
+        - @users.each do |user|
+          = link_to gravatar_for(user, size: 30), user

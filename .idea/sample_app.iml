@@ -40,6 +40,7 @@
     <orderEntry type="library" scope="PROVIDED" name="faker (v1.0.1, RVM: ruby-1.9.3-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="ffi (v1.0.11, RVM: ruby-1.9.3-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="gravatar_image_tag (v1.0.0, RVM: ruby-1.9.3-p0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="haml (v3.2.0.alpha.8, RVM: ruby-1.9.3-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="hike (v1.2.1, RVM: ruby-1.9.3-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="i18n (v0.6.0, RVM: ruby-1.9.3-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="jquery-rails (v1.0.18, RVM: ruby-1.9.3-p0) [gem]" level="application" />
@@ -71,7 +72,6 @@
     <orderEntry type="library" scope="PROVIDED" name="sass (v3.1.10, RVM: ruby-1.9.3-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sass-rails (v3.1.5, RVM: ruby-1.9.3-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="selenium-webdriver (v2.13.0, RVM: ruby-1.9.3-p0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="simple_form (v1.5.2, RVM: ruby-1.9.3-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="spork (v0.8.5, RVM: ruby-1.9.3-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sprockets (v2.0.3, RVM: ruby-1.9.3-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sqlite3 (v1.3.4, RVM: ruby-1.9.3-p0) [gem]" level="application" />

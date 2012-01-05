@@ -1,0 +1,13 @@
+%table.profile(summary="Profile information")
+  %tr
+    %td.main
+      %h1
+        = gravatar_for @user
+        = @user.name
+      = render 'follow_form' if signed_in?
+      -unless @user.microposts.empty?
+        %table.microposts(summary="User microposts")
+          = render @microposts
+    %td.sidebar.round
+      = render 'users/user_display'
+      = render 'shared/stats'

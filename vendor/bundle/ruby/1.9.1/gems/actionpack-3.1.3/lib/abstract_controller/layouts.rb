@@ -60,7 +60,7 @@ module AbstractController
   # <tt>app/views/layouts/weblog/posts.html.erb</tt>.
   #
   # Since all your controllers inherit from ApplicationController, they will use
-  # <tt>app/views/layouts/application.html.erb</tt> if no other layout is specified
+  # <tt>app/views/layouts/application.html.haml</tt> if no other layout is specified
   # or provided.
   #
   # == Inheritance Examples

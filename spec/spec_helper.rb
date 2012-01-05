@@ -26,7 +26,7 @@ RSpec.configure do |config|
   # If you're not using ActiveRecord, or you'd prefer not to run each of your
   # examples within a transaction, remove the following line or assign false
   # instead of true.
-  config.use_transactional_fixtures = false
+  config.use_transactional_fixtures = true
 
   # If true, the base class of anonymous controllers will be inferred
   # automatically. This will be the default behavior in future versions of
@@ -55,5 +55,11 @@ RSpec.configure do |config|
     fill_in 'Email',    :with => user.email
     fill_in 'Password', :with => user.password
     click_button 'Sign in'
+  end
+
+  def make_micropost(content)
+    click_link 'Home'
+    fill_in 'micropost_content', :with => content
+    click_button 'Submit'
   end
 end
