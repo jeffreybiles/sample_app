@@ -1,0 +1,6 @@
+%p It works!
+= form_for current_user.favors.find_by_god_id(god),
+              html: { method: :put} do |f|
+  %div= f.hidden_field :god_id
+  .actions= f.submit "Add experience."
+  -#this takes me to favors/:id.  Want to redirect to current page

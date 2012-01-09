@@ -1,0 +1,4 @@
+= form_for current_user.favors.build(user_id: current_user.id, god_id: god.id) do |f|
+  %div=f.hidden_field :user_id
+  %div=f.hidden_field :god_id
+  .actions=f.submit "Worship"

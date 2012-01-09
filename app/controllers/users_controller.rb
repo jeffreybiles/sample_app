@@ -68,6 +68,13 @@ class UsersController < ApplicationController
     render 'show_follow'
   end
 
+  def gods
+    @title = "Favor with the gods"
+    @user = User.find(params[:id])
+    @gods = @user.gods.paginate(page: params[:page])
+    render 'show_user_gods'
+  end
+
   private
 
     def correct_user

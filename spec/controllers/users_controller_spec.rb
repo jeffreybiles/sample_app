@@ -135,6 +135,7 @@ describe UsersController do
     before(:each) do
       @user = Factory(:user)
       integration_sign_in(@user)
+      save_and_open_page
       click_link 'Settings'
     end
 

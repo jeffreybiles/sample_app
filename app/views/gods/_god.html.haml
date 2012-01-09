@@ -1,0 +1,20 @@
+%li
+  %h1= link_to god.name, god
+  %p=god.description
+  Max level:
+  =god.max_level
+  %br
+  Your level with this god is
+  IMPLEMENT THIS
+  %br
+  #follow_form
+    -if god.worshipped_by?(current_user)
+      =render 'favors/add_experience', god: god
+    -else
+      =render 'gods/worship', god: god
+  -if current_user.admin?
+    |
+    =link_to 'Edit this god', edit_god_path(god)
+    |
+    = link_to "delete", god, :method => :delete, :confirm => "You sure?",
+                                :title => "Delete #{god.name}"
