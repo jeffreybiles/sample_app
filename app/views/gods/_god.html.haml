@@ -5,8 +5,11 @@
   =god.max_level
   %br
   Your level with this god is
-  IMPLEMENT THIS
+  =current_user.favors.find_by_god_id(god).level
   %br
+  To reach the next level, you must gain
+  =Integer(current_user.favors.find_by_god_id(god).experience)
+  more experience.
   #follow_form
     -if god.worshipped_by?(current_user)
       =render 'favors/add_experience', god: god

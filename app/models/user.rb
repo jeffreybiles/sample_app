@@ -86,6 +86,19 @@ class User < ActiveRecord::Base
     @favor.save!
   end
 
+  def level_up
+    @favor.level += 1
+    @favor.experience= experience_required - @favor.experience
+  end
+
+  def experience_required
+    40 * (1.2 ** (@favor.level - 1))
+  end
+
+  def experience_gained(challenge_level)
+    10 * (1.15 ** (challenge_level - 1)) / (1.1 ** (@favor.level - challenge_level))
+  end
+
 
   private
 
@@ -104,18 +117,5 @@ class User < ActiveRecord::Base
 
 		def secure_hash(string)
 			Digest::SHA2.hexdigest(string)
-    end
-
-    def level_up
-      @favor.level += 1
-      @favor.experience= experience_required - @favor.experience
-    end
-
-    def experience_required
-      40 * (1.2 ** (@favor.level - 1))
-    end
-
-    def experience_gained(challenge_level)
-      10 * (1.15 ** (challenge_level - 1)) / (1.1 ** (@favor.level - challenge_level))
-    end
+		end
 end
